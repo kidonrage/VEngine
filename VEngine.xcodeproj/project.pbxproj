@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E1A473622440A8D3007A961F /* VEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E1A473602440A8D3007A961F /* VEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1A4736E2440CF57007A961F /* GameViewController-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4736D2440CF57007A961F /* GameViewController-macOS.swift */; };
+		E1A473702440CF65007A961F /* GameViewController-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4736F2440CF65007A961F /* GameViewController-iOS.swift */; };
+		E1A473742440CFC5007A961F /* VGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A473732440CFC5007A961F /* VGame.swift */; };
+		E1A473762440CFD2007A961F /* VScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A473752440CFD2007A961F /* VScene.swift */; };
+		E1A473782440CFDB007A961F /* VNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A473772440CFDB007A961F /* VNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E1A4735D2440A8D3007A961F /* VEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A473602440A8D3007A961F /* VEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VEngine.h; sourceTree = "<group>"; };
 		E1A473612440A8D3007A961F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1A4736D2440CF57007A961F /* GameViewController-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController-macOS.swift"; sourceTree = "<group>"; };
+		E1A4736F2440CF65007A961F /* GameViewController-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController-iOS.swift"; sourceTree = "<group>"; };
+		E1A473732440CFC5007A961F /* VGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGame.swift; sourceTree = "<group>"; };
+		E1A473752440CFD2007A961F /* VScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScene.swift; sourceTree = "<group>"; };
+		E1A473772440CFDB007A961F /* VNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +56,71 @@
 		E1A4735F2440A8D3007A961F /* VEngine */ = {
 			isa = PBXGroup;
 			children = (
+				E1A473682440BB6C007A961F /* Sources */,
 				E1A473602440A8D3007A961F /* VEngine.h */,
 				E1A473612440A8D3007A961F /* Info.plist */,
 			);
 			path = VEngine;
+			sourceTree = "<group>";
+		};
+		E1A473682440BB6C007A961F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E1A473692440BB87007A961F /* Core */,
+				E1A4736A2440CF0B007A961F /* Integrations */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E1A473692440BB87007A961F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E1A473712440CFA3007A961F /* API */,
+				E1A473722440CFA9007A961F /* Internals */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E1A4736A2440CF0B007A961F /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				E1A4736C2440CF38007A961F /* AppKit */,
+				E1A4736B2440CF32007A961F /* UIKit */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		E1A4736B2440CF32007A961F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E1A4736F2440CF65007A961F /* GameViewController-iOS.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E1A4736C2440CF38007A961F /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				E1A4736D2440CF57007A961F /* GameViewController-macOS.swift */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		E1A473712440CFA3007A961F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E1A473732440CFC5007A961F /* VGame.swift */,
+				E1A473752440CFD2007A961F /* VScene.swift */,
+				E1A473772440CFDB007A961F /* VNode.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E1A473722440CFA9007A961F /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Internals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +166,7 @@
 				TargetAttributes = {
 					E1A4735C2440A8D3007A961F = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -131,6 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A473702440CF65007A961F /* GameViewController-iOS.swift in Sources */,
+				E1A4736E2440CF57007A961F /* GameViewController-macOS.swift in Sources */,
+				E1A473742440CFC5007A961F /* VGame.swift in Sources */,
+				E1A473782440CFDB007A961F /* VNode.swift in Sources */,
+				E1A473762440CFD2007A961F /* VScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +337,7 @@
 		E1A473662440A8D3007A961F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
@@ -276,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.VladEliseev.VEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +363,7 @@
 		E1A473672440A8D3007A961F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
